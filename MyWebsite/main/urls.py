@@ -4,6 +4,8 @@ from . import views
 app_name = 'main'
 
 urlpatterns= [
-path('',views.date,name='date'),
+    path('today/', views.date_today, name='date'),
+    path('favs/games/', views.fave_game, name='fave_game'),
+    path('random/password/',views.random_password, name='random_password' )
 ]
 
