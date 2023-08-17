@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>game</title>
     <link rel="stylesheet"href="css/style.css"/>
 <style>
+   
+      .row {
+        
+        display: table;
+        text-align: center;
+        width: 1300px;
+        padding: 50px;
+     }
+      h2 {
+        font-family: verdana;
+        color: lightblue;
+      }
 </style>
 </head>
 <body>
+    <div class="row">
+        <h2>  the fiv game is  </h2> 
+            {% for game in games %}
+            <p>  {{game}}</p>
+            {% endfor %} 
+        </div>
 
-<div class='method'>
-    
-</div>
 </body>
 </html>
