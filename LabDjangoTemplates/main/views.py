@@ -12,14 +12,14 @@ def date_view(request: HttpRequest) -> HttpResponse:
     today = date.today()
 
 
-    return render(request, 'index/today.html', {"today": today})
+    return render(request, 'main/today.html', {"today": today})
 
 def random_password(request: HttpRequest) -> HttpResponse:
 
     characters = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(random.choice(characters) for chr in range(10))
 
-    return render(request, 'passwordPage/password.html', {"password": password})
+    return render(request, 'main/password.html', {"password": password})
 
 def fav_movies(request: HttpRequest)-> HttpResponse:
     context = {
@@ -30,5 +30,5 @@ def fav_movies(request: HttpRequest)-> HttpResponse:
             "movie4",
         ]
     }
-    return render(request, 'favMovies/fav_movies.html', context)
+    return render(request, 'main/fav_movies.html', context)
 
