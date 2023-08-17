@@ -11,17 +11,10 @@ def today(request : HttpRequest):
 # Create your views here.
 
 def random_password(request : HttpRequest):
-    letters = string.ascii_letters
-    digits = string.digits
-    special_chars = string.punctuation
-    alphabet = letters + digits + special_chars
-    pwd_length = 12
-    password = ''
-    for i in range(pwd_length):
-        password += ''.join(random.choice(alphabet))
-    print(password)
-    context = {"password" :password}
-    return render(request, "main/random_password.html",context)
+       random_pass = random.choices(string.ascii_letters+string.digits+string.punctuation, k=15)
+       random_pass_string = "".join(random_pass)
+       context = {"pass" : random_pass_string}
+       return render(request, "main/random_password.html",context)
 
 def games(request : HttpRequest):
 
