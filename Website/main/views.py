@@ -7,7 +7,7 @@ import string
 
 # Create your views here.
 
-def date_today(request:HttpRequest):
+def today_date(request:HttpRequest):
     today = date.today()
     context ={"date":today}
     return render(request ,'main/today_date.html', context)
